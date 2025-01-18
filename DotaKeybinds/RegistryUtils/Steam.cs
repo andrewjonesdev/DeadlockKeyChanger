@@ -10,11 +10,11 @@ namespace DotaKeybinds.RegistryUtils
     internal class Steam
     {
         const string REGISTRY_STEAM_PATH = @"SOFTWARE\Valve\Steam";
-        const string REGISTRY_DOTA_PATH = @"SOFTWARE\Valve\Steam\Apps\570";
+        const string REGISTRY_DOTA_PATH = @"SOFTWARE\Valve\Steam\Apps\1422450";
         const string REGISTRY_ACTIVEPROCESS_PATH = @"SOFTWARE\Valve\Steam\ActiveProcess";
 
         const string REGISTRY_STEAM_INSTALLPATH_DEFAULT = "c:/program files (x86)/steam";
-
+        //const string REGISTRY_STEAM_INSTALLPATH_DEFAULT = "A:/SteamLibrary";
         public static string GetInstallPath()
         {
             RegistryKey? rk = Registry.CurrentUser.OpenSubKey(REGISTRY_STEAM_PATH, false);

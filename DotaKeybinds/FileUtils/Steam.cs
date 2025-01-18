@@ -13,7 +13,7 @@ namespace DotaKeybinds.FileUtils
         public static string GetDotaSettings(string steamid)
         {
             string SteamPath = RegistryUtils.Steam.GetInstallPath().Replace("/",@"\");
-            string Dota2Path = Path.Combine(SteamPath, "userdata", steamid, "570");
+            string Dota2Path = Path.Combine(SteamPath, "userdata", steamid, "1422450");
             if(!Directory.Exists(Dota2Path))
                 Directory.CreateDirectory(Dota2Path);
 
