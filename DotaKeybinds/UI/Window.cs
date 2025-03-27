@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DotaKeybinds.FileUtils;
 using DotaKeybinds.KeyChanger;
+using DotaKeybinds.RegistryUtils;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DotaKeybinds.UI
 {
@@ -97,6 +101,23 @@ namespace DotaKeybinds.UI
         {
             //force transfer
             _changer.WriteKeybinds();
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                DotaKeybinds.RegistryUtils.Steam.GetInstallPath(dialog.SelectedPath);
+            }
+        }
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo psInfo = new ProcessStartInfo
+            {
+                FileName = "https://github.com/andrewjonesdev/DeadlockKeyChanger",
+                UseShellExecute = true
+            };
+            Process.Start(psInfo);
         }
     }
 }

@@ -60,7 +60,7 @@ namespace DotaKeybinds.KeyChanger
                 bool was_dota_running = false;
                 string last_user_id = "";
                 RegistryUtils.Steam.GetInstallPath(); // this throws exception if steam isn't installed
-                if (!RegistryUtils.Steam.HasDotaInstalled()) throw new Exception("Dota 2 not installed");
+                if (!RegistryUtils.Steam.HasDotaInstalled()) throw new Exception("Deadlock not installed");
                 while (true)
                 {
                     currentDotaStatus = RegistryUtils.Steam.IsDotaRunning();

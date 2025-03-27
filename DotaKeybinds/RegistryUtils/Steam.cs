@@ -15,12 +15,14 @@ namespace DotaKeybinds.RegistryUtils
 
         const string REGISTRY_STEAM_INSTALLPATH_DEFAULT = "c:/program files (x86)/steam";
         //const string REGISTRY_STEAM_INSTALLPATH_DEFAULT = "A:/SteamLibrary";
-        public static string GetInstallPath()
+
+
+        public static string GetInstallPath(string installPath = REGISTRY_STEAM_INSTALLPATH_DEFAULT)
         {
             RegistryKey? rk = Registry.CurrentUser.OpenSubKey(REGISTRY_STEAM_PATH, false);
             if (rk == null) throw new Exception("Could not find 'Steam' path. Is Steam Installed?");
-            string? result = (string?)rk.GetValue("SteamPath", REGISTRY_STEAM_INSTALLPATH_DEFAULT);
-            if (result == null) return REGISTRY_STEAM_INSTALLPATH_DEFAULT;
+            string? result = (string?)rk.GetValue("SteamPath", installPath);
+            if (result == null) return installPath;
             return result;
         } 
         public static bool HasDotaInstalled()

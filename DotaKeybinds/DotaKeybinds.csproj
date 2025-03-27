@@ -6,9 +6,9 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>dota_2_eNu_icon.ico</ApplicationIcon>
-    <AssemblyName>Dota 2 Keybind Changer</AssemblyName>
-    <Authors>Kegan Hollern</Authors>
+    <ApplicationIcon>deadlock_eNu_icon.ico</ApplicationIcon>
+    <AssemblyName>Ddadlock Keybind Changer</AssemblyName>
+    <Authors>Andrew Jones based on original work of Kegan Hollern</Authors>
     <Company />
     <Description>Automatically Update Dota 2 Alt Account Keybinds</Description>
     <PackageProjectUrl>https://github.com/KeganHollern/DotaKeyChanger</PackageProjectUrl>

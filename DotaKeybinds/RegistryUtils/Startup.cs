@@ -9,7 +9,7 @@ namespace DotaKeybinds.RegistryUtils
 {
     internal class Startup
     {
-        const string RUN_ENTRY_NAME = "Dota2KeybindsChanger";
+        const string RUN_ENTRY_NAME = "DeadlockKeybindsChanger";
         const string REGISTRY_RUN_PATH = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run";
         const string REGISTRY_STARTUP_PATH = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\StartupApproved\\Run";
         static readonly byte[] STARTUP_VALUE_DISABLED = new byte[] { 0x03, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 };
